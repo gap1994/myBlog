@@ -11,7 +11,7 @@
 		</p>
 
 		<p class="author__links">
-			<a href="https://github.com/gap1994/myBlog.git">GitHub</a>
+			<a href="https://github.com/gap1994/myBlog">GitHub</a>
 		</p>
 
 	</div>
