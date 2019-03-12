@@ -22,6 +22,11 @@ export default {
     Pager
   },
   metaInfo: {
+    meta: [
+      { name: 'author', content: 'gap1994' },
+      { key: 'keywords', name: 'keywords', content: 'gap1994个人博客' },
+      { key: 'description', name: 'description', content: 'gap1994个人博客' }
+    ],
     title: 'gap1994'
   }
 }
@@ -57,7 +62,7 @@ query ($page: Int) {
   }
 }
 </page-query>
-<style>
+<style lang="scss" scoped>
 .home-links a {
   margin-right: 1rem;
 }
