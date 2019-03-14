@@ -42,7 +42,7 @@ export default {
     PostCard
   },
   metaInfo: {
-    title: 'Hello, world!'
+    title: 'gap1994'
   }
 }
 </script>

@@ -58,7 +58,7 @@ query BlogPost ($path: String!) {
   post: post (path: $path) {
     title
     path
-    date (format: "D. MMMM YYYY")
+    date (format: "YYYY-MM-DD")
     timeToRead
     tags {
       id
@@ -72,7 +72,7 @@ query BlogPost ($path: String!) {
 }
 </page-query>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .post-title {
   padding: calc(var(--space) / 2) 0 calc(var(--space) / 2);
   text-align: center;

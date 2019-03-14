@@ -2,10 +2,11 @@
   <Layout :show-logo="false">
     <!-- Author intro -->
     <Author :show-title="true" />
-    
     <!-- List posts -->
-    <div class="posts">
-      <PostCard v-for="edge in $page.posts.edges" :key="edge.node.id" :post="edge.node"/>
+    <div class="posts el-row">
+      <div v-for="i in list" :key="i" class="el-col-lg-8 card-padding">
+        <PostCard v-for="(edge, index) in $page.posts.edges" :key="index" :post="edge.node" :show="index%3 === i"/>
+      </div>
     </div>
     <Pager class="pagination" :linkClass="'pager'" :info="$page.posts.pageInfo"/>
   </Layout>
@@ -16,6 +17,11 @@ import { Pager } from 'gridsome'
 import Author from '~/components/Author.vue'
 import PostCard from '~/components/PostCard.vue'
 export default {
+  data () {
+    return {
+      list: [0, 1, 2]
+    }
+  },
   components: {
     Author,
     PostCard,
@@ -33,7 +39,7 @@ export default {
 </script>
 <page-query>
 query ($page: Int) {
-  posts: allPost (perPage: 10, page: $page) @paginate  {
+  posts: allPost (perPage: 12, page: $page) @paginate  {
     pageInfo {
       totalPages
       currentPage
@@ -90,5 +96,33 @@ query ($page: Int) {
 .active{
   background-color: var(--link-color);
   color: #fff!important;
+}
+.card-padding{
+  padding: 0 20px;
+}
+@media only screen and (max-width: 767px) {
+  .card-padding{
+    padding: 0;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .card-padding{
+    padding: 0;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .card-padding{
+    padding: 0 20px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .card-padding{
+    padding: 0 20px;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .card-padding{
+    padding: 0 20px;
+  }
 }
 </style>

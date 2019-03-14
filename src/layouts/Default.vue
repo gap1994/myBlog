@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-
     <header class="header">
       <div class="header__left">
         <Logo v-if="showLogo" /> 
@@ -40,6 +39,16 @@ export default {
 </script>
 
 <style lang="scss">
+.bg{
+  position: absolute;
+  width: 100%;
+  height: 75%;
+  background-image: linear-gradient( 135deg, #65FDF0 10%, #1D6FA3 100%);
+  z-index: -1;
+}
+.quick-menu{
+  z-index: 999;
+}
 .fade-enter-active {
   transition: opacity .5s;
 }
@@ -78,7 +87,8 @@ export default {
   padding: calc(var(--space) / 2);
   text-align: center;
   font-size: .8em;
-
+  float: left;
+  width: 100%;
   > span {
     margin: 0 .35em;
   }
