@@ -17,7 +17,7 @@
     <footer class="footer">
       <span class="footer__copyright">Copyright © {{ new Date().getFullYear() }}. </span>
       <span class="footer__links">Powered by <a href="//www.gap1994.xyz"> gap1994 </a></span>
-      <span class="footer__beian"><a href="//www.miitbeian.gov.cn/state/outPortal/loginPortal.action">苏ICP备15004460号</a></span>
+      <span class="footer__beian"><a href="http://beian.miit.gov.cn">粤ICP备19024703号</a></span>
     </footer>
 
   </div>
